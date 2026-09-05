@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
+
+	<!-- Services 菜单：在任何 App 里选中文本 → 右键「服务」就能调用。
+	     NSMessage 对应 ServicesProvider 里的 @objc 方法名。 -->
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict><key>default</key><string>Bento：识别并处理</string></dict>
+			<key>NSMessage</key>
+			<string>bentoDetect</string>
+			<key>NSPortName</key>
+			<string>Bento</string>
+			<key>NSSendTypes</key>
+			<array><string>NSStringPboardType</string></array>
+			<key>NSReturnTypes</key>
+			<array><string>NSStringPboardType</string></array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict><key>default</key><string>Bento：格式化 JSON</string></dict>
+			<key>NSMessage</key>
+			<string>bentoFormatJSON</string>
+			<key>NSPortName</key>
+			<string>Bento</string>
+			<key>NSSendTypes</key>
+			<array><string>NSStringPboardType</string></array>
+			<key>NSReturnTypes</key>
+			<array><string>NSStringPboardType</string></array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict><key>default</key><string>Bento：Base64 编码</string></dict>
+			<key>NSMessage</key>
+			<string>bentoBase64Encode</string>
+			<key>NSPortName</key>
+			<string>Bento</string>
+			<key>NSSendTypes</key>
+			<array><string>NSStringPboardType</string></array>
+			<key>NSReturnTypes</key>
+			<array><string>NSStringPboardType</string></array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict><key>default</key><string>Bento：Base64 解码</string></dict>
+			<key>NSMessage</key>
+			<string>bentoBase64Decode</string>
+			<key>NSPortName</key>
+			<string>Bento</string>
+			<key>NSSendTypes</key>
+			<array><string>NSStringPboardType</string></array>
+			<key>NSReturnTypes</key>
+			<array><string>NSStringPboardType</string></array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict><key>default</key><string>Bento：URL 解码</string></dict>
+			<key>NSMessage</key>
+			<string>bentoURLDecode</string>
+			<key>NSPortName</key>
+			<string>Bento</string>
+			<key>NSSendTypes</key>
+			<array><string>NSStringPboardType</string></array>
+			<key>NSReturnTypes</key>
+			<array><string>NSStringPboardType</string></array>
+		</dict>
+	</array>
+</dict>
+</plist>
